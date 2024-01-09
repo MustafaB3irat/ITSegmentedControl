@@ -12,4 +12,10 @@ public struct ITSegmentBorderConfigurations {
     let borderColor: UIColor
     var selectedBorderColor: UIColor? = nil
     let borderWidth: CGFloat
+    
+    public init(borderColor: UIColor, selectedBorderColor: UIColor? = nil, borderWidth: CGFloat) {
+        self.borderColor = borderColor
+        self.selectedBorderColor = selectedBorderColor
+        self.borderWidth = borderWidth
+    }
 }

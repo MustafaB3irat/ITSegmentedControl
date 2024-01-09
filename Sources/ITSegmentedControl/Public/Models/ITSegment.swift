@@ -19,4 +19,17 @@ public struct ITSegment {
     var selectedBackgroundColor: UIColor = .clear
     var borderConfigurations: ITSegmentBorderConfigurations? = nil
     var contentType: ITSegmentContentModeType = .imageFirst
+    
+    public init(title: String, image: UIImage? = nil, selectedImage: UIImage? = nil, selectedIndicatorColor: UIColor, titleColor: UIColor, selectedTitleColor: UIColor, backgroundColor: UIColor, selectedBackgroundColor: UIColor, borderConfigurations: ITSegmentBorderConfigurations? = nil, contentType: ITSegmentContentModeType) {
+        self.title = title
+        self.image = image
+        self.selectedImage = selectedImage
+        self.selectedIndicatorColor = selectedIndicatorColor
+        self.titleColor = titleColor
+        self.selectedTitleColor = selectedTitleColor
+        self.backgroundColor = backgroundColor
+        self.selectedBackgroundColor = selectedBackgroundColor
+        self.borderConfigurations = borderConfigurations
+        self.contentType = contentType
+    }
 }
