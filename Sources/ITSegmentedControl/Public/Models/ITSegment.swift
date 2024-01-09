@@ -10,17 +10,17 @@ import UIKit
 /// Configurations for segment
 public struct ITSegment {
     let title: String
-    var image: UIImage? = nil
-    var selectedImage: UIImage? = nil
-    var selectedIndicatorColor: UIColor = .black
-    var titleColor: UIColor = .label
-    var selectedTitleColor: UIColor = .label
-    var backgroundColor: UIColor = .clear
-    var selectedBackgroundColor: UIColor = .clear
-    var borderConfigurations: ITSegmentBorderConfigurations? = nil
-    var contentType: ITSegmentContentModeType = .imageFirst
+    var image: UIImage?
+    var selectedImage: UIImage?
+    let selectedIndicatorColor: UIColor
+    let titleColor: UIColor
+    let selectedTitleColor: UIColor
+    let backgroundColor: UIColor
+    let selectedBackgroundColor: UIColor
+    var borderConfigurations: ITSegmentBorderConfigurations?
+    let contentType: ITSegmentContentModeType
     
-    public init(title: String, image: UIImage? = nil, selectedImage: UIImage? = nil, selectedIndicatorColor: UIColor, titleColor: UIColor, selectedTitleColor: UIColor, backgroundColor: UIColor, selectedBackgroundColor: UIColor, borderConfigurations: ITSegmentBorderConfigurations? = nil, contentType: ITSegmentContentModeType) {
+    public init(title: String, image: UIImage? = nil, selectedImage: UIImage? = nil, selectedIndicatorColor: UIColor = .black, titleColor: UIColor = .label, selectedTitleColor: UIColor = .label, backgroundColor: UIColor = .clear, selectedBackgroundColor: UIColor = .clear, borderConfigurations: ITSegmentBorderConfigurations? = nil, contentType: ITSegmentContentModeType = .imageFirst) {
         self.title = title
         self.image = image
         self.selectedImage = selectedImage
