@@ -81,7 +81,7 @@ view.addSubview(segmentedControl)
 
 `ITSegmentedControl` is a UIControl component so you can deal with it as normal UISegmentedControl add receive action for value changed.
 
-```
+```swift
 segmentedControl.addAction(UIAction { _ in
    print("Segment \(segmentControl.selectedSegment?.title) is selected"
 }, for: .valueChanged)
