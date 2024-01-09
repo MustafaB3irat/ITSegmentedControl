@@ -12,6 +12,18 @@ final class ITSegmentedControlViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.segments.last?.title, segmentID, "Not added to last")
     }
     
+    func testAddSegments() throws {
+        let viewModel = ITSegmentedControlViewModel()
+        XCTAssertTrue(viewModel.segments.isEmpty, "Invalid started not empty")
+        let segmentID = "Test1"
+        let segment1ID = "Test2"
+        let segmentConfigurations = ITSegment(title: segmentID)
+        let segmentConfigurations1 = ITSegment(title: segment1ID)
+        viewModel.add(segment: segmentConfigurations)
+        viewModel.add(segment: segmentConfigurations1)
+        XCTAssertEqual(viewModel.segments.count, 2, "Segments not added to model")
+    }
+    
     func testRemoveSegmentwithTitle() {
         let viewModel = ITSegmentedControlViewModel()
         let segmentID = "Test"
@@ -19,6 +31,19 @@ final class ITSegmentedControlViewModelTests: XCTestCase {
         viewModel.add(segment: segmentConfigurations)
         XCTAssertFalse(viewModel.segments.isEmpty, "Segment not added to model")
         viewModel.removeSegment(withTitle: segmentID)
+        XCTAssertTrue(viewModel.segments.isEmpty, "Segment not removed from model")
+    }
+    
+    func testRemoveAllSegments() {
+        let viewModel = ITSegmentedControlViewModel()
+        let segmentID = "Test1"
+        let segment1ID = "Test2"
+        let segmentConfigurations = ITSegment(title: segmentID)
+        let segmentConfigurations1 = ITSegment(title: segment1ID)
+        viewModel.add(segment: segmentConfigurations)
+        viewModel.add(segment: segmentConfigurations1)
+        XCTAssertEqual(viewModel.segments.count, 2, "Segment not added to model")
+        viewModel.removeAllSegments()
         XCTAssertTrue(viewModel.segments.isEmpty, "Segment not removed from model")
     }
     

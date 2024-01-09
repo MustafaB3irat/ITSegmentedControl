@@ -71,6 +71,12 @@ final public class ITSegmentedControl: UIControl {
     
     // MARK: - LifeCycle
     
+    public init(segments: [ITSegment]) {
+        super.init(frame: .zero)
+        setupViewsHierarchy()
+        add(segments: segments)
+    }
+    
     public override init(frame: CGRect) {
         super.init(frame: frame)
         setupViewsHierarchy()
@@ -91,6 +97,13 @@ final public class ITSegmentedControl: UIControl {
         populateSegments()
     }
     
+    /// Use this method to append array of segments to the segmented control
+    /// - Parameter segments: Segments to be appended to the current segments
+    public func add(segments: [ITSegment]) {
+        segments.forEach({ viewModel.add(segment: $0 )})
+        populateSegments()
+    }
+    
     /// Use it to update existing segment with new configuration
     /// - Parameters:
     ///   - id: Id of existing segment
@@ -104,6 +117,12 @@ final public class ITSegmentedControl: UIControl {
     /// - Parameter id: Id of segment to be removed
     public func removeSegment(withTitle title: String) {
         viewModel.removeSegment(withTitle: title)
+        populateSegments()
+    }
+    
+    /// Use it to remove all current segments, thus having empty segment
+    public func removeAllSegments() {
+        viewModel.removeAllSegments()
         populateSegments()
     }
     

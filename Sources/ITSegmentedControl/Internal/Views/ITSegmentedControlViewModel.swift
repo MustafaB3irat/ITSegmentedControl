@@ -34,6 +34,10 @@ final class ITSegmentedControlViewModel {
         }
     }
     
+    func removeAllSegments() {
+        segments.removeAll()
+    }
+    
     func updateSegment(withTitle title: String, updatedSegment: ITSegment) {
         guard let index = segments.firstIndex(where: { $0.title == title }) else {
             return
