@@ -9,9 +9,9 @@ import UIKit
 
 /// Border configurations, if set selected indicator will not appear as the border takes control now.
 public struct ITSegmentBorderConfigurations {
-    let borderColor: UIColor
-    var selectedBorderColor: UIColor?
-    let borderWidth: CGFloat
+    public let borderColor: UIColor
+    public var selectedBorderColor: UIColor?
+    public let borderWidth: CGFloat
     
     public init(borderColor: UIColor, selectedBorderColor: UIColor? = nil, borderWidth: CGFloat) {
         self.borderColor = borderColor
