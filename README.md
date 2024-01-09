@@ -19,7 +19,7 @@ ITSegmentedControl comes with autoscrolling when a segment is selected to reveal
 ### Installation:
 
    ```
-    * Available as Swift Package Manager with URL: `https://github.com/MustafaB3irat/ITSegmentedControl.git`
+    * Available on Swift Package Manager with URL: `https://github.com/MustafaB3irat/ITSegmentedControl.git`
    ```
 
 ----
