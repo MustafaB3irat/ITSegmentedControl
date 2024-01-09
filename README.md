@@ -6,6 +6,8 @@
 
 Comes with many customizations up to the segment itself, the ability to change the color of text, and image, and also change selection colors.
 
+ITSegmentedControl comes with autoscrolling when a segment is selected to reveal more segments when possible.
+
 ![borderless](https://github.com/MustafaB3irat/ITSegmentedControl/assets/45164085/f74f75ab-f026-4d5f-b80b-59e814cf7972) | ![withBorder](https://github.com/MustafaB3irat/ITSegmentedControl/assets/45164085/86022b5c-00c5-4aa4-9c3d-e7bf826402c2)
 
 #### Selection Styles:
@@ -73,6 +75,17 @@ segmentedControl.selectSegment(at: 0)
 
 // Add to your view
 view.addSubview(segmentedControl)
+```
+
+#### Receiving Actions
+
+`ITSegmentedControl` is a UIControl component so you can deal with it as normal UISegmentedControl add receive action for value changed.
+
+```
+segmentedControl.addAction(UIAction { _ in
+   print("Segment \(segmentControl.selectedSegment?.title) is selected"
+}, for: .valueChanged)
+
 ```
 ----
 
@@ -213,15 +226,16 @@ Feel free to utilize these functions to dynamically manage and manipulate segmen
 
 ----
 
-##Found a bug?
+## Found a bug?
 
 File an issue and we will get it sorted.
 
-<iframe src="https://gifer.com/embed/jU" width=480 height=269.760 frameBorder="0" allowFullScreen></iframe><p><a href="https://gifer.com">via GIFER</a></p>
+![jU](https://github.com/MustafaB3irat/ITSegmentedControl/assets/45164085/5fffb7df-2fbe-40cb-bf75-7b17ff8050e4)
+<a href="https://gifer.com">via GIFER</a>
 
 ----
 
-##Want to contribute?
+## Want to contribute?
 
 Reach me at Linkedin: <a href = 'https://www.linkedin.com/in/mustafa-birat/'> Mustafa B'irat </a>
 
