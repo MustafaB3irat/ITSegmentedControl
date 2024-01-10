@@ -1,7 +1,6 @@
 # ITSegmentedControl 
 
-![Static Badge](https://img.shields.io/badge/IT_Segmented_Control-blue) ![Static Badge](https://img.shields.io/badge/SPM-Compatable-green) ![Static Badge](https://img.shields.io/badge/Swift-5.x-green)
-
+![Static Badge](https://img.shields.io/badge/IT_Segmented_Control-blue) ![Static Badge](https://img.shields.io/badge/SPM-Compatable-green) ![Static Badge](https://img.shields.io/badge/Swift-5.5-green)
 
 ## A custom scrollable segmented control that supports a combination of titles and images with selected segment bottom indicator or bordered segments
 
